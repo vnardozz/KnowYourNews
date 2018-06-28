@@ -1,0 +1,48 @@
+body{
+    background: url("https://blog.spoongraphics.co.uk/wp-content/uploads/2012/textures/19.jpg")
+}
+.jumbotron {
+ font-family: 'Shrikhand', cursive;
+ font-size: 60px;
+ text-align: center;
+ background: url("http://compuson.com/fondo3.jpg");
+ background-size:cover
+}
+#intro {
+ font-family: 'Shadows Into Light', cursive;
+ font-style: italic;
+ background-color: rgba(255, 255, 255, 0.3);
+ overflow: hidden;
+ border-right: .15em solid rgb(0, 0, 0); 
+ white-space: nowrap; 
+ text-align: center;
+ margin: 10px auto; /* Gives that scrolling effect as the typing happens */
+ letter-spacing: .12em; /* Adjust as needed */
+ animation: 
+    typing 3s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+h6 {
+ font-family: 'Shadows Into Light', cursive;
+ font-size: 20px;
+ color: black;
+}
+a {
+  color: black;
+}
+a:hover{
+  color: red;
+}
+
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 80% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(0, 0, 0); }
+  }
+ 
