@@ -3,6 +3,10 @@
       text-align: center;
   }
 
+  img {
+    float: right;
+}
+  
   .footer {
     position: absolute;
     bottom: 0;
