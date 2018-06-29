@@ -1,0 +1,1 @@
+insert into articles (Headline, web_address, is_real) values ("Obama Signs Executive Order Banning The Pledge Of Allegiance In Schools Nationwide", "http://abcnews.com.co/obama-executive-order-bans-pledge-of-allegiance-in-schools/", false);
