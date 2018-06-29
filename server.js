@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 // var routes = require("./controllers/catsController.js");
 
-app.use(routes);
+//app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
