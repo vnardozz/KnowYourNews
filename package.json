@@ -1,0 +1,25 @@
+{
+  "name": "knowyournews",
+  "version": "1.0.0",
+  "description": "social experiment site designed to bring awareness to the wealth of information provided to our society and remaining knowledgeable on what is truly accurate.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnardozz/KnowYourNews.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vnardozz/KnowYourNews/issues"
+  },
+  "homepage": "https://github.com/vnardozz/KnowYourNews#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "mysql": "^2.15.0",
+    "require": "^2.4.20"
+  }
+}
