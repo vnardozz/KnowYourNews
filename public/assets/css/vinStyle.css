@@ -54,7 +54,34 @@ body{
 
   }
 
-  #real, #fake {
+  #fake{
+    display:block;
+    width:150px;
+    height:150px;
+    line-height:50px;
+    border: 2px solid #f5f5f5;
     border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: #d80101d8;
+    box-shadow: 0 0 40px rgb(0, 0, 0);
+    font-size:28px;
+    font-weight:bold;
+  }
+  #real {
+    display:block;
+    width:150px;
+    height:150px;
+    line-height:50px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: #29b100d8;
+    box-shadow: 0 0 40px rgb(0, 0, 0);
+    font-size:28px;
+    font-weight:bold;
   }
   
