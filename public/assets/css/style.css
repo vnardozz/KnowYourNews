@@ -1,16 +1,7 @@
 body {
-    background-color: gray;
-    text-align: center;
-    background: url("https://blog.spoongraphics.co.uk/wp-content/uploads/2012/textures/19.jpg")
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px; /* Set the fixed height of the footer here */
-  line-height: 60px; /* Vertically center the text there */
-  background-color: #f5f5f5;
+  height: 100%;
+  text-align: center;
+  background: url("https://blog.spoongraphics.co.uk/wp-content/uploads/2012/textures/19.jpg")
 }
 h6 {
   font-family: 'Shadows Into Light', cursive;
@@ -31,18 +22,20 @@ h6 {
  background: url("http://compuson.com/fondo3.jpg");
  background-size:cover
 }
+
 #intro {
  font-family: 'Shadows Into Light', cursive;
  font-style: italic;
+ word-wrap: normal;
  background-color: rgba(255, 255, 255, 0.3);
  overflow: hidden;
  border-right: .15em solid rgb(0, 0, 0); 
- white-space: nowrap; 
+ white-space: normal; 
  text-align: center;
  margin: 10px auto; /* Gives that scrolling effect as the typing happens */
  letter-spacing: .12em; /* Adjust as needed */
  animation: 
-    typing 3s steps(40, end),
+    typing 4s steps(40, end),
     blink-caret .75s step-end infinite;
 }
 
@@ -50,7 +43,7 @@ h6 {
   /* The typing effect */
   @keyframes typing {
     from { width: 0 }
-    to { width: 80% }
+    to { width: 100% }
   }
   
   /* The typewriter cursor effect */
