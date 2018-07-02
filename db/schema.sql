@@ -3,6 +3,7 @@ CREATE DATABASE news_db;
 
 use news_db;
 
+
 CREATE TABLE articles (
   item_id INT NOT NULL AUTO_INCREMENT,
   Headline VARCHAR(255) NOT NULL,
