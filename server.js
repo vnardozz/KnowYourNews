@@ -5,6 +5,8 @@ var PORT = process.env.PORT || 8080;
 
 var app = express();
 
+var db = require("./models"); 
+
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
@@ -16,12 +18,15 @@ app.use(bodyParser.json());
 
 // var routes = require("./controllers/catsController.js");
 
-//app.use(routes);
+//NEED TO REQUIRE THIS APIROUTES PAGE WHENN COMPLETE
+require("./routes/apiRoutes.js")(app);
+require ("./routes/htmlRoutes.js")(app);
 
 // Start our server so that it can begin listening to client requests.
+db.sequelize.sync().then(function() {
 app.listen(PORT, function() {
     // Log (server-side) when our server has started
     console.log("Server listening on: http://localhost:" + PORT);
   });
-
+});
 
