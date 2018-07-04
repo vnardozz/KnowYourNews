@@ -10,6 +10,30 @@ h6 {
   color: black;
 }
 
+h1 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 40px;
+  color: black;
+}
+
+h2 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 30px;
+  color: black;
+}
+
+#title {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
+  color: black;
+}
+
+#url {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
+  color: black;
+}
+
 a {
   color: black;
 }
