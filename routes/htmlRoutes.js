@@ -6,17 +6,17 @@ module.exports = function(app) {
   
     // index route loads view.html
     app.get("/", function(req, res) {
-      res.sendFile(path.join(__dirname, "./views/index.html"));
+      res.sendFile(path.join(__dirname, "../views/index.html"));
     });
   
     // cms route loads cms.html
     app.get("/quiz", function(req, res) {
-      res.sendFile(path.join(__dirname, "./views/quiz.html"));
+      res.sendFile(path.join(__dirname, "../views/quiz.html"));
     });
   
     // blog route loads blog.html
     app.get("/results", function(req, res) {
-      res.sendFile(path.join(__dirname, "./views/results.html"));
+      res.sendFile(path.join(__dirname, "../views/results.html"));
     });
   
   
