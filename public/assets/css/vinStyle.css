@@ -1,140 +1,145 @@
-body{
-    background: url("https://blog.spoongraphics.co.uk/wp-content/uploads/2012/textures/19.jpg")
+body {
+  background: url("https://blog.spoongraphics.co.uk/wp-content/uploads/2012/textures/19.jpg")
 }
+
 .jumbotron {
- font-family: 'Shrikhand', cursive;
- font-size: 60px;
- text-align: center;
- background: url("http://compuson.com/fondo3.jpg");
- background-size:cover
-}
-#intro {
- font-family: 'Shadows Into Light', cursive;
- font-style: italic;
- background-color: rgba(255, 255, 255, 0.3);
- overflow: hidden;
- border-right: .15em solid rgb(0, 0, 0); 
- white-space: nowrap; 
- text-align: center;
- margin: 10px auto; /* Gives that scrolling effect as the typing happens */
- letter-spacing: .12em; /* Adjust as needed */
- animation: 
-    typing 3s steps(40, end),
-    blink-caret .75s step-end infinite;
+  font-family: 'Shrikhand', cursive;
+  font-size: 60px;
+  text-align: center;
+  background: url("http://compuson.com/fondo3.jpg");
+  background-size: cover
 }
 
+/* quiz styling */
 
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 80% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(0, 0, 0); }
-  }
- 
-
-
-
-
-  /* quiz styling */
-
-  .question {
+.question {
   background-color: white;
   border-radius: 20px;
   margin-top: 10%;
-  box-shadow: 20px  20px black;
+  box-shadow: 20px 20px black;
+}
 
-  }
+.col-centered {
+  float: none;
+  margin: 10% auto;
+}
 
-  .col-centered {
-    float: none;
-    margin: 10% auto;
-  }
-    #answers {
-    padding: 5%;
+#answers {
+  padding: 5%;
+}
 
-  }
-  
-  .fa-bounce {
-    display: inline-block;
-    position: relative;
-    -moz-animation: bounce 1s infinite linear;
-    -o-animation: bounce 1s infinite linear;
-    -webkit-animation: bounce 1s infinite linear;
-    animation: bounce 1s infinite linear;
+.fa-bounce {
+  display: inline-block;
+  position: relative;
+  -moz-animation: bounce 1s infinite linear;
+  -o-animation: bounce 1s infinite linear;
+  -webkit-animation: bounce 1s infinite linear;
+  animation: bounce 1s infinite linear;
 }
 
 @-webkit-keyframes bounce {
-    0% { top: 0; }
-    50% { top: -0.2em; }
-    70% { top: -0.3em; }
-    100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
 }
+
 @-moz-keyframes bounce {
-    0% { top: 0; }
-    50% { top: -0.2em; }
-    70% { top: -0.3em; }
-    100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
 }
+
 @-o-keyframes bounce {
-    0% { top: 0; }
-    50% { top: -0.2em; }
-    70% { top: -0.3em; }
-    100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
 }
+
 @-ms-keyframes bounce {
-    0% { top: 0; }
-    50% { top: -0.2em; }
-    70% { top: -0.3em; }
-    100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
 }
+
 @keyframes bounce {
-    0% { top: 0; }
-    50% { top: -0.2em; }
-    70% { top: -0.3em; }
-    100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
 }
 
+#fake {
+  display: block;
+  width: 110px;
+  height: 110px;
+  line-height: 50px;
+  border: 2px solid #f5f5f5;
+  border-radius: 50%;
+  color: #f5f5f5;
+  text-align: center;
+  text-decoration: none;
+  background: #d80101d8;
+  box-shadow: 0 0 40px rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+}
 
-
-
-
-
-
-
-
-  #fake{
-    display:block;
-    width: 110px;
-    height:110px;
-    line-height:50px;
-    border: 2px solid #f5f5f5;
-    border-radius: 50%;
-    color:#f5f5f5;
-    text-align:center;
-    text-decoration:none;
-    background: #d80101d8;
-    box-shadow: 0 0 40px rgb(0, 0, 0);
-    font-size:18px;
-    font-weight:bold;
-  }
-  #real {
-    display:block;
-    width:110px;
-    height:110px;
-    line-height:50px;
-    border: 2px solid #f5f5f5;
-    border-radius: 50%;
-    color:#f5f5f5;
-    text-align:center;
-    text-decoration:none;
-    background: #29b100d8;
-    box-shadow: 0 0 40px rgb(0, 0, 0);
-    font-size:18px;
-    font-weight:bold;
-  }
-  
+#real {
+  display: block;
+  width: 110px;
+  height: 110px;
+  line-height: 50px;
+  border: 2px solid #f5f5f5;
+  border-radius: 50%;
+  color: #f5f5f5;
+  text-align: center;
+  text-decoration: none;
+  background: #29b100d8;
+  box-shadow: 0 0 40px rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+}

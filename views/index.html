@@ -68,9 +68,9 @@
                                     happy meal, he was still depressed.</p>
                                     <p>[…]</p>
                                     <p>“I bought my happy meal, thinking that that would be the perfect solution for my depression",
-                                        Caradehuevo relates. He kept going: “I started eating and I was half way done, but my
-                                        depression was still there”, he states. After finishing his food, the depression hadn’t
-                                        still gone away, and he got really pissed.</p>
+                                    Caradehuevo relates. He kept going: “I started eating and I was half way done, but my
+                                    depression was still there”, he states. After finishing his food, the depression hadn’t
+                                    still gone away, and he got really pissed.</p>                       
 
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -120,17 +120,9 @@
                 </div>
             </div>
 
-
-
-
-
-            
             <div class="row">
                 <div class="col-xs-12" id="intro">
-                    <h1>Do you really know where your news comes from? 
-                        With so much information readily accessible at our fingertips
-                        these days it is easy to get lost looking for the truth. If you had to, could you call out the real from
-                        the fake? Here is your chance, take our quiz and put yourself to the test on how well YOU know your news!
+                    <h1>
                     </h1>
                 </div>
             </div>
@@ -144,12 +136,21 @@
                     </main>
                 </div>
             </div>
-
-
         </div>
-
-
-
-
     </body>
 </html>
+
+<script>
+    var i = 0;
+    var txt ="Do you really know where your news comes from? With so much information readily accessible at our fingertips these days it is easy to get lost looking for the truth. If you had to, could you call out the real from the fake? Here is your chance, take our quiz and put yourself to the test on how well YOU know your news!";
+        var speed = 20; /* The speed/duration of the effect in milliseconds */
+        
+        function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("intro").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    typeWriter();
+    </script>
