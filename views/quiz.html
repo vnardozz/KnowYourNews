@@ -33,6 +33,12 @@
         href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
         
     </head>
+    <div class="jumbotron">Know Your News
+            <h6>A social experiment from Team Chicago</h6>
+            <h6>
+                <a href="https://github.com/vnardozz/KnowYourNews">our repo link</a>
+            </h6>
+        </div>
 
     <body>
         <div class = "row animated bounceInDown">
@@ -62,3 +68,12 @@
 
     </body>
 </html>
+
+<script>
+  $.get("/api/article", function(response){
+      console.log(response)
+      $(".header").html(response[0].Headline)
+      $(".body" ).html(`<a target="_blank" href="${response[0].web_address}"> ${response[0].web_address} </a>`)
+
+  })  
+</script>

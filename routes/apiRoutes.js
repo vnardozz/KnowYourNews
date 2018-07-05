@@ -1,28 +1,39 @@
-var db = require("../models");
+var news_db = require("../models");
 
-function getRandommNumber() {
-  Math.floor(Math.random() * 55)+1
-  return 
-}
+
 
 // Routes
 // =============================================================
 module.exports = function(app) {
 
+
+
   // return random article
-  app.get("/api/article/:id", function(req, res) {
+  app.get("/api/article", function(req, res) {
+    var randomNumber= Math.floor(Math.random() * 55)+1
 
     // Finding article, and then returning them to the user as JSON.
-    news_db.articles.findOne({
-      where:
-        {
-          id: req.params.RandommNumber()
-        }
-    }).then(function(res) {
-        res.json();
+    news_db.articles.findAll({
+      where: {
+        item_id: randomNumber
+      }
+    }).then(function(result) {
+        res.json(result);
     })
-      console.log(res)
    });
+
+   app.get("/api/art", function(req, res) {
+
+    // Finding article, and then returning them to the user as JSON.
+    news_db.News.create({
+      item_id: 56,
+      Headline: "hello"      
+    }).then(function(result) {
+        res.json(result);
+    })
+   });
+
+
 
 
 

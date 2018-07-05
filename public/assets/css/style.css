@@ -45,6 +45,7 @@ a:hover {
 .jumbotron {
   font-family: 'Shrikhand', cursive;
   font-size: 60px;
+  margin-bottom: 0;
   text-align: center;
   background: url("http://compuson.com/fondo3.jpg");
   background-size: cover
@@ -69,6 +70,7 @@ a:hover {
 .col-centered {
   float: none;
   margin: 10% auto;
+  margin-top: 0;
 }
 
 #answers {

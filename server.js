@@ -7,6 +7,12 @@ var app = express();
 
 var db = require("./models"); 
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 // Serve static content for the app from the "public" directory in the application directory.
 
 // had to change from "public" to __dirname to correct MIME type issue when serving through node

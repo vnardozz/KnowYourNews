@@ -6,8 +6,8 @@
 // sequelize (lowercase) references our connection to the DB.
 //var sequelize = require("../config/connection.js");
 module.exports = function(sequelize, DataTypes) {
-// Creates a "News" model that matches up with DB
-var News = sequelize.define("article", {
+// Creates a "Articles" model that matches up with DB
+var Articles = sequelize.define("articles", {
   item_id: {
     type: DataTypes.INTEGER,
     primaryKey: true
@@ -20,9 +20,9 @@ var News = sequelize.define("article", {
 {timestamps: false}
 );
 
-return News;
+return Articles;
 // Syncs with DB
-//News.sync();
+//Articles.sync();
 };
-// Makes the News Model available for other files (will also create a table)
-//module.exports = News;
+// Makes the Articles Model available for other files (will also create a table)
+//module.exports = Articles;
