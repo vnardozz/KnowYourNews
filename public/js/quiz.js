@@ -3,6 +3,7 @@ var dataToCompare;
 
 function loadArticle() {
 
+  //loads new article for user to guess if real or fake
   $.get("/api/article", function (response) {
     dataToCompare = response[0].is_real;
     $(".header").html(response[0].Headline)
@@ -10,6 +11,11 @@ function loadArticle() {
     $(".body").html(`<a target="_blank" href="${response[0].web_address}"> ${response[0].web_address} </a>`)
   })
   console.log(counter)
+
+  //directs user to results page
+  if (counter == 10) {
+    window.location.replace("/results")
+  }
 
 }
 loadArticle();
