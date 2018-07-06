@@ -1,28 +1,47 @@
-//this needs to go somewhere to randomly generate article/headline
+var counter = 0
+var dataToCompare;
 
-var randomNumber = Math.floor(Math.random() * 70)+1
+function loadArticle() {
 
-var randomRecord = data[randomNumber]
+  $.get("/api/article", function (response) {
+    dataToCompare = response[0].is_real;
+    $(".header").html(response[0].Headline)
+    $("h1").attr("data-info", response[0].is_real)
+    $(".body").html(`<a target="_blank" href="${response[0].web_address}"> ${response[0].web_address} </a>`)
+  })
+  console.log(counter)
 
+}
+loadArticle();
 
+$('#real').click(function () {
+  var data = $(this).data('info');
 
-      
+  if (data === dataToCompare) {
+    counter++;
+    confirm('correct');
+    loadArticle();
 
+  } else if (data != dataToCompare) {
+    counter++;
+    confirm("wrong!! This was totally fake")
+    loadArticle();
 
+  }
+})
 
-.then(function(results) {
-    console.log(results);
-  // results are available to us inside the .then
-  res.json(results);
-});
+$('#fake').click(function () {
+  var data = $(this).data('info');
 
+  if (data === dataToCompare) {
+    confirm('correct');
+    loadArticle();
+    counter++;
 
-// use jquery to select data from get and display to quiz.html
+  } else if (data != dataToCompare) {
+    confirm("wrong!! This was totally real")
+    loadArticle();
+    counter++;
 
-//function to load new quiz question when "next" button is clicked. 
-
-//display if the user is right or wrong
-
-// after the 10th question send user to results route
-
-
+  }
+})

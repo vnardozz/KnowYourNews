@@ -31,7 +31,6 @@
 
         <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-        
     </head>
     <div class="jumbotron">Know Your News
             <h6>A social experiment from Team Chicago</h6>
@@ -54,12 +53,12 @@
                     </div>
                             
                             <div class = "row" id="answers">
-                                <button type = "button" class = "fa-bounce fas fa-times col-xs-4 col-xs-offset-2" id="fake">
+                                <button data-info="false"  type = "button" class = "fa-bounce fas fa-times col-xs-4 col-xs-offset-2" id="fake">
                                     FAKE
                                 </button>
                                 <div class="col-xs-4"></div>
 
-                                <button type = "button" class = "fa-bounce fas fa-check col-xs-4 col-xs-offset-2" id="real">
+                                <button data-info="true" type = "button" class = "fa-bounce fas fa-check col-xs-4 col-xs-offset-2" id="real">
                                     REAL
                                 </button>
                             </div>
@@ -68,12 +67,5 @@
 
     </body>
 </html>
+<script src="../public/js/quiz.js"></script> 
 
-<script>
-  $.get("/api/article", function(response){
-      console.log(response)
-      $(".header").html(response[0].Headline)
-      $(".body" ).html(`<a target="_blank" href="${response[0].web_address}"> ${response[0].web_address} </a>`)
-
-  })  
-</script>

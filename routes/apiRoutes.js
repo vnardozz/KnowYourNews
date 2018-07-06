@@ -22,17 +22,7 @@ module.exports = function(app) {
     })
    });
 
-   app.get("/api/art", function(req, res) {
-
-    // Finding article, and then returning them to the user as JSON.
-    news_db.News.create({
-      item_id: 56,
-      Headline: "hello"      
-    }).then(function(result) {
-        res.json(result);
-    })
-   });
-
+  
 
 
 
