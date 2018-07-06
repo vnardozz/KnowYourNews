@@ -11,13 +11,12 @@ var News = sequelize.define("article", {
   item_id: {
     type: DataTypes.INTEGER,
     primaryKey: true
-  },
-  Headline: DataTypes.STRING,
-  web_address: DataTypes.STRING,
-  is_real: DataTypes.BOOLEAN,
-  
-},
-{timestamps: false}
+    },
+    Headline: DataTypes.STRING,
+    web_address: DataTypes.STRING,
+    is_real: DataTypes.BOOLEAN,
+    },
+    {timestamps: false}
 );
 
 return News;
