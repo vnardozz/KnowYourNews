@@ -15,9 +15,9 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../public/assets/css/vinStyle.css">
+        <link rel="stylesheet" href="/../public/assets/css/style.css">
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -27,7 +27,8 @@
 
         <!--<link rel="stylesheet" href="../public/assets/css/reset.css">-->
         <!--<link rel="stylesheet" href="../public/assets/css/jessStyle.css">-->
-        <link rel="stylesheet" href="../public/assets/css/style.css">
+            <!-- changed the relative pathway for MIME type to be correct -->
+        <link rel="stylesheet" type="text/css" href="/public/assets/css/style.css">
 
         <!--fonts-->
         <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
@@ -68,9 +69,9 @@
                                     happy meal, he was still depressed.</p>
                                     <p>[…]</p>
                                     <p>“I bought my happy meal, thinking that that would be the perfect solution for my depression",
-                                        Caradehuevo relates. He kept going: “I started eating and I was half way done, but my
-                                        depression was still there”, he states. After finishing his food, the depression hadn’t
-                                        still gone away, and he got really pissed.</p>
+                                    Caradehuevo relates. He kept going: “I started eating and I was half way done, but my
+                                    depression was still there”, he states. After finishing his food, the depression hadn’t
+                                    still gone away, and he got really pissed.</p>                       
 
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -120,17 +121,9 @@
                 </div>
             </div>
 
-
-
-
-
-            
             <div class="row">
                 <div class="col-xs-12" id="intro">
-                    <h1>Do you really know where your news comes from? 
-                        With so much information readily accessible at our fingertips
-                        these days it is easy to get lost looking for the truth. If you had to, could you call out the real from
-                        the fake? Here is your chance, take our quiz and put yourself to the test on how well YOU know your news!
+                    <h1>
                     </h1>
                 </div>
             </div>
@@ -139,17 +132,26 @@
                 <div class="col-md-12">
                     <main role="main" class="inner cover">
                         <p>
-                            <a href="#" class="btn btn-lg btn-primary">Take Quiz!</a>
+                            <a  class="btn btn-lg btn-primary" href="/quiz">Take Quiz!</a>
                         </p>
                     </main>
                 </div>
             </div>
-
-
         </div>
-
-
-
-
     </body>
 </html>
+
+<script>
+    var i = 0;
+    var txt ="Do you really know where your news comes from? With so much information readily accessible at our fingertips these days it is easy to get lost looking for the truth. If you had to, could you call out the real from the fake? Here is your chance, take our quiz and put yourself to the test on how well YOU know your news!";
+        var speed = 20; /* The speed/duration of the effect in milliseconds */
+        
+        function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("intro").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    typeWriter();
+    </script>
