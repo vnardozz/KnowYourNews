@@ -30,8 +30,8 @@ module.exports = function (app) {
       web_address: req.body.web_address,
       is_real: req.body.is_real
     })
-      .then(function(res) {
-        res.json(res);
+      .then(function(result) {
+        res.json(result);
       });
   });
 
