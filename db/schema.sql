@@ -8,7 +8,7 @@ CREATE TABLE articles (
   item_id INT NOT NULL AUTO_INCREMENT,
   Headline VARCHAR(255) NOT NULL,
   web_address VARCHAR(1000) NOT NULL,
-  is_real boolean Not NULL,
+  is_real boolean NULL,
   PRIMARY KEY(item_id)
 );
 

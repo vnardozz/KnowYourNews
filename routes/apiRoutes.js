@@ -1,21 +1,19 @@
-<<<<<<< HEAD
 var db = require("../models");
+var news_db = require("../models");
+
+
 
 function getRandommNumber() {
     Math.floor(Math.random() * 55)+1
     return 
    };
-=======
-var news_db = require("../models");
 
 
->>>>>>> 5a3c245bdf6adc04fe3afbb12c4dcc88741111a2
 
 // Routes
 // =============================================================
 module.exports = function(app) {
 
-<<<<<<< HEAD
   // shows all articles
   app.get("/api/article", function(req, res) {
 
@@ -39,7 +37,6 @@ module.exports = function(app) {
     // app.post("/api/results", function(req, res) {
 
     // });
-=======
 
 
   // return random article
@@ -67,9 +64,14 @@ module.exports = function(app) {
     })
    });
 
-
-
->>>>>>> 5a3c245bdf6adc04fe3afbb12c4dcc88741111a2
+//adding new article and headline
+   app.post("/api/results", function(req, res) {
+    // Create a new entry with the data available to us in req.body
+    console.log(req.body);
+    db.NewArticle.create(req.body).then(function(dbNewArticle) {
+      res.json(dbNewArticle);
+    });
+  });
 
 
 };

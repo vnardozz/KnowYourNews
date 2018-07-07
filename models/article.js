@@ -19,9 +19,22 @@ var Articles = sequelize.define("articles", {
     {timestamps: false}
 );
 
+// var NewArticle = sequelize.define("newarticle", {
+//   item_id: {
+//     type: DataTypes.INTEGER,
+//     primaryKey: true
+//     },
+//     Headline: DataTypes.STRING,
+//     web_address: DataTypes.STRING,
+//     is_real: DataTypes.BOOLEAN,
+//     },
+//     {timestamps: false}
+// );
+
 return Articles;
 // Syncs with DB
 //Articles.sync();
 };
 // Makes the Articles Model available for other files (will also create a table)
 //module.exports = Articles;
+
