@@ -5,23 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Know Your News!</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
         <link rel="stylesheet" href="../public/assets/css/vinStyle.css">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!--Font awesome CDN-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">        
         <link rel="stylesheet" href="../public/assets/css/jessStyle.css">
         <link rel="stylesheet" href="../public/assets/css/style.css">
 
@@ -31,7 +30,6 @@
 
         <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-        
     </head>
     <div class="jumbotron">Know Your News
             <h6>A social experiment from Team Chicago</h6>
@@ -44,7 +42,7 @@
         <div class = "row animated bounceInDown">
             <div class="col-xs-2"></div>
                 <div class="question col-xs-8 col-centered">
-                    <div><h1 class= "header"></h1>
+                    <div><h2 class= "header"></h2>
                     </div>
                     
                     <div>
@@ -54,12 +52,12 @@
                     </div>
                             
                             <div class = "row" id="answers">
-                                <button type = "button" class = "fa-bounce fas fa-times col-xs-4 col-xs-offset-2" id="fake">
+                                <button data-info="false"  type = "button" class = "fa-bounce fas fa-times col-xs-4 col-xs-offset-2" id="fake">
                                     FAKE
                                 </button>
                                 <div class="col-xs-4"></div>
 
-                                <button type = "button" class = "fa-bounce fas fa-check col-xs-4 col-xs-offset-2" id="real">
+                                <button data-info="true" type = "button" class = "fa-bounce fas fa-check col-xs-4 col-xs-offset-2" id="real">
                                     REAL
                                 </button>
                             </div>
@@ -68,12 +66,5 @@
 
     </body>
 </html>
+<script src="../public/js/quiz.js"></script> 
 
-<script>
-  $.get("/api/article", function(response){
-      console.log(response)
-      $(".header").html(response[0].Headline)
-      $(".body" ).html(`<a target="_blank" href="${response[0].web_address}"> ${response[0].web_address} </a>`)
-
-  })  
-</script>
