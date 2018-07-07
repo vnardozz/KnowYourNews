@@ -1,12 +1,14 @@
+
+
 $(document).ready(function () {
+
+    var counter = 56;
 
     var headlineInput = $("#articleTitle");
 
     var urlInput = $("#url");
 
-    var real = $("#real");
-
-    var fake = $("#fake");
+    var realOrFake = $("#realorfake")
 
     $(newForm).on("submit", function handleFormSubmit(event) {
             event.preventDefault();
@@ -16,12 +18,17 @@ $(document).ready(function () {
             }
 
             var newArt = {
+                item_id: counter++,
                 Headline: headlineInput.val().trim(),
                 web_address: urlInput.val().trim(),
-                is_real: real.val() || fake.val()
+                is_real: realOrFake.val()
             };
 
             console.log(newArt);
+
+            $.post("/api/newarticles", newArt, function(res) {
+                console.log(res);
+            })
     
         });
 

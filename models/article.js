@@ -1,6 +1,6 @@
 // Dependencies
 // =============================================================
-
+var Sequelize = require("sequelize");
 module.exports = function (sequelize, DataTypes) {
   // Creates a "Articles" model that matches up with DB
   var Articles = sequelize.define("articles", {
