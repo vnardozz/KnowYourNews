@@ -32,7 +32,7 @@ $(document).ready(function () {
     
         });
 
-        $("#newForm")[0].reset();
+        $(newForm)[0].reset();
 
     });
 
