@@ -32,6 +32,8 @@ $(document).ready(function () {
     
         });
 
+        $("#newForm")[0].reset();
+
     });
 
 
