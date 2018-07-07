@@ -1,9 +1,9 @@
 {
     "development": {
-      "username": "root",
-      "password": "Dltbw1478vn",
-      "database": "news_db",
-      "host": "127.0.0.1",
+      "username": "voiozsc7zhxl706t",
+      "password": "rzhjh2c0jt9hp4jo",
+      "database": "s6lqyh8j573fzm7k",
+      "host": "g8mh6ge01lu2z3n1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "port": 3306,
       "dialect": "mysql"
     },
