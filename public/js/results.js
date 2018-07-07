@@ -1,31 +1,28 @@
-var headlineInput = $("#articleTitle");
-
-var urlInput = $("#url");
-
 $(document).ready(function () {
 
-    function handleFormSubmit(event) {
-        event.preventDefault();
+    var headlineInput = $("#articleTitle");
 
-        var currentURL = window.location.origin;
+    var urlInput = $("#url");
 
-        $.ajax({
-                url: currentURL + "/api/tables",
-                method: "GET"
-            })
-            .then(function (newArticleData) {
+    $(newForm).on("submit", function handleFormSubmit(event) {
+            event.preventDefault();
+            // Wont submit the post if we are missing a headline or url
+            if (!headlineInput.val().trim() || !urlInput.val().trim()) {
+                return;
+            }
 
-                $(newForm).on("submit", handleFormSubmit);
+            var newArt = {
+                Headline: headlineInput.val().trim(),
+                web_address: urlInput.val().trim()
+            };
 
-                function handleFormSubmit(event) {
-                    event.preventDefault();
-                    // Wont submit the post if we are missing a headline or url
-                    if (!headlineInput.val().trim() || !urlInput.val().trim()) {
-                        return;
-                    };
+            console.log(newArt);
+    
+        });
 
-                };
-
-            });
-        };
     });
+
+
+
+
+

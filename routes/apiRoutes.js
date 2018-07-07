@@ -1,5 +1,6 @@
 var news_db = require("../models");
-var newArticleData = require("../data/newArticleData");
+var newArticleData = require("../models/newArticleData");
+
 // Routes
 // =============================================================
 module.exports = function (app) {
@@ -21,10 +22,15 @@ module.exports = function (app) {
 
 
 
-  app.post("/api/newarticles", function (req, res) {
-    newArticleData.push(req.body).then(function (res) {
-    res.json(res);
-    });
+  app.post("/api/newarticles", function(req, res) {
+    console.log(req.body);
+    news_db.newArticle.create({
+      Headline: req.body.Headline,
+      web_address: req.body.web_address
+    })
+      .then(function(res) {
+        res.json(res);
+      });
   });
 
 };
