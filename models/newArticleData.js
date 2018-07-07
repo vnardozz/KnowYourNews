@@ -1,7 +1,7 @@
 //var Sequelize = require("sequelize");
 
 module.exports = function(sequelize, DataTypes) {
-    var newArticle = sequelize.define("NewArticle", {
+    var newArticleArray = sequelize.define("NewArticle", {
         item_id: {
         type: DataTypes.INTEGER,
         allowNull: true
@@ -15,6 +15,6 @@ module.exports = function(sequelize, DataTypes) {
 
     });
 
-    return newArticle;
+    return newArticleArray;
   };
   

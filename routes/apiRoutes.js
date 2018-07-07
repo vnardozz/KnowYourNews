@@ -1,5 +1,5 @@
 var news_db = require("../models");
-var newArticleData = require("../models/newArticleData");
+var newArticle = require("../models");
 
 // Routes
 // =============================================================
@@ -25,8 +25,10 @@ module.exports = function (app) {
   app.post("/api/newarticles", function(req, res) {
     console.log(req.body);
     news_db.newArticle.create({
+      item_id: req.body.item_id,
       Headline: req.body.Headline,
-      web_address: req.body.web_address
+      web_address: req.body.web_address,
+      is_real: req.body.is_real
     })
       .then(function(res) {
         res.json(res);
