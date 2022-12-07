@@ -19,9 +19,9 @@
   "homepage": "https://github.com/vnardozz/KnowYourNews#readme",
   "dependencies": {
     "animate.css": "^3.6.1",
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "dotenv": "^6.0.0",
-    "express": "^4.16.3",
+    "express": "^4.18.2",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
     "path": "^0.12.7",
